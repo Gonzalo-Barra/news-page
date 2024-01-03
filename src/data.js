@@ -1,6 +1,6 @@
-import image1 from './assets/image-gaming-growth.jpg'
-import image2 from './assets/image-retro-pcs.jpg'
-import image3 from './assets/image-top-laptops.jpg'
+import image3 from './assets/image-gaming-growth.jpg'
+import image1 from './assets/image-retro-pcs.jpg'
+import image2 from './assets/image-top-laptops.jpg'
 
 export const cardNewsData = [
   {

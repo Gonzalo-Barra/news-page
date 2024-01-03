@@ -3,9 +3,7 @@ import w3mobile from "./assets/image-web-3-mobile.jpg";
 import w3desktop from "./assets/image-web-3-desktop.jpg";
 import { cardNewsData, cardHeadlinesData } from "./data.js";
 import "./App.css";
-import logo from "./assets/logo.svg";
-import navbarlogo from "./assets/icon-menu.svg";
-import navbarlogoclose from "./assets/icon-menu-close.svg";
+import Header from "./assets/Components/Header.jsx";
 
 function CardNews({ title, text, children }) {
   return (
@@ -17,85 +15,27 @@ function CardNews({ title, text, children }) {
     </>
   );
 }
+
 function CardHeadlines({ title, subtitle, text, image }) {
   return (
-    <article className="card-headlines">
-      <picture>
-        <img srcSet={image} alt={`Image for ${title}`} />
-      </picture>
-      <section className="card-info">
-        <h3>{title}</h3>
-        <h2>{subtitle}</h2>
-        <p>{text}</p>
-      </section>
+    <article className="card">
+      <img srcSet={image} alt={`Image for ${title}`} />
+
+     <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>{text}</p>
     </article>
-  );
-}
-
-function NavbarOpen({ navbarClick, setNavbarClick }) {
-  const handleOnClick = () => {
-    setNavbarClick(!navbarClick);
-  };
-
-  return (
-    <>
-     
-
-      <section className="navbar-mobile">
-      <section className="navbar-icon">
-        <img srcSet={navbarlogoclose} onClick={handleOnClick} />
-      </section>
-        <ul>
-          <li>
-            <a>home</a>
-          </li>
-          <li>
-            <a>New</a>
-          </li>
-          <li>
-            {" "}
-            <a>Popular</a>
-          </li>
-          <li>
-            {" "}
-            <a>Trending</a>
-          </li>
-          <li>
-            {" "}
-            <a>Categories</a>
-          </li>
-        </ul>
-      </section>
-    </>
-  );
-}
-
-function Navbar() {
-  const [navbarClick, setNavbarClick] = useState(true);
-
-  return (
-    <nav className="navbar">
-      <img src={logo} alt="Logo" />
-      <img
-        onClick={() => setNavbarClick(!navbarClick)}
-        src={navbarlogo}
-        alt="Navbar Logo"
-      />
-      {navbarClick ? (
-        <NavbarOpen navbarClick={navbarClick} setNavbarClick={setNavbarClick} />
-      ) : null}
-    </nav>
   );
 }
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
         <picture>
-          <source media="(max-width: 1439px)" srcSet={w3mobile} />
-          <source media="(min-width: 1440px)" srcSet={w3desktop} />
+          <source media="(max-width: 500px)" srcSet={w3mobile} />
+          <source media="(min-width: 501px)" srcSet={w3desktop} />
           <img src={w3mobile} className="banner" />
         </picture>
         <article className="main">
