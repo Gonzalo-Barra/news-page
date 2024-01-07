@@ -3,7 +3,7 @@ import w3mobile from "./assets/image-web-3-mobile.jpg";
 import w3desktop from "./assets/image-web-3-desktop.jpg";
 import { cardNewsData, cardHeadlinesData } from "./data.js";
 import "./App.css";
-import Header from "./assets/Components/Header.jsx";
+import Header from "./Components/Header.jsx";
 
 function CardNews({ title, text, children }) {
   return (

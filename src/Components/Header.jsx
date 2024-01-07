@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import logo from "../../assets/logo.svg";
-import navbarlogo from "../../assets/icon-menu.svg";
-import navbarlogoclose from "../../assets/icon-menu-close.svg";
+import logo from "../assets/logo.svg";
+import navbarlogo from "../assets/icon-menu.svg";
+import navbarlogoclose from "../assets/icon-menu-close.svg";
 import './Navbar.css'
 export default function Navbar() {
     const [navbarClick, setNavbarClick] = useState(true);

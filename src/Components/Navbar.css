@@ -1,4 +1,3 @@
-
 .navbar {
   padding: 20px;
   display: flex;
@@ -59,4 +58,18 @@
 .navbar-mobile.mostrar + .overlay {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1339px) {
+  .navbar-mobile {
+    display: none;
+  }
+
+  .navbar-mobile.mostrar + .overlay {
+    display: none;
+  }
+
+  .navbar button{
+    display: none;
+  }
 }
